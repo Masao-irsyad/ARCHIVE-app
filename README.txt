@@ -1,15 +1,13 @@
-ARCHIVE v0.6 — STUDIO CONNECT BETA (UTHM PILOT)
+ARCHIVE v0.7 — STUDIO PORTAL (UTHM BETA / DEMO)
 
-Netlify-ready static app with optional live RSS Netlify Function.
+New entry flow: demo sign-in -> Student/Lecturer role -> My Studios dashboard. No large landing-page hero.
+Demo sign-in accepts any name/email locally; it is NOT real Google login, does NOT verify email, and does NOT synchronize across devices.
 
-NEW: Studio Connect tab, Student/Lecturer DEMO roles, class creation, invitation code join (preloaded UTHMBFR2601), crit scheduling, announcements, demo JSON export and reset.
+Studio Connect supports class code UTHMBFR2601, lecturer class creation, crit scheduling, announcements and student join within ONE browser.
+All v0.6 features remain: Projects, Tasks, Schedule, Crit Journal, Discover, Inspiration Board, sound and themes.
 
-IMPORTANT: This is a SINGLE-BROWSER LOCALSTORAGE DEMO. There is no actual login, verified lecturer role, remote database, real multi-user synchronization, email or push notification. Switching roles in the same browser lets you simulate lecturer and student. Class codes created on one device cannot be joined from another device. Do not use for actual student submissions or confidential information.
+Deployment: extract ZIP, commit updated index.html, sw.js, README.txt, and other files to existing GitHub ARCHIVE-app repo. Preserve netlify/functions/architecture-feed.js path. Netlify redeploys on commit.
 
-Preserved from v0.5: dashboard, projects/tasks, schedule/crit journal, profile, export/import, theme, retro sound, Discover, magazine visuals, saved references, knowledge, RSS function. Existing archive-web-v1 and archive-sonic-settings-v1 keys are unchanged. Studio data uses archive-studio-connect-demo-v1.
+IMPORTANT: Back up app data before updating. Existing archive-web-v1, archive-discover-v04 and archive-studio-connect-demo-v1 localStorage data are retained. A new archive-portal-demo-session-v1 key stores the fake local sign-in session. No personal data is transmitted by this demo sign-in.
 
-DEPLOY: Extract this ZIP. Upload all files to your GitHub repository with netlify/functions/architecture-feed.js retaining its directory path. Netlify should deploy automatically if connected to GitHub. Netlify.toml configures functions. Export an ARCHIVE backup before updating.
-
-TO TEST: Open Studio Connect > Lecturer View > create a class, add a crit and announcement > Student View > join with the code > observe the same-browser changes. Or join the preloaded UTHMBFR2601 class.
-
-REAL MULTI-USER RELEASE: requires authentication, role verification, backend database, authorization policies and realtime subscriptions.
+Live news is provided by the Netlify Function and may fail if external RSS is unavailable.
