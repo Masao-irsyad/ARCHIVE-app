@@ -1,5 +1,9 @@
-ARCHIVE v0.7.1 — Role & Profile Demo Update
+ARCHIVE v0.8 — Studio Experience Demo / UTHM Pilot
 
-Role selected at demo sign-in determines the visible Studio dashboard. Student and Lecturer switch buttons are hidden; sign out and sign back in to test the other role. This is NOT real access control or authentication. Lecturer profile includes academic position, department, staff ID, specialisation, university, and name. Student profile remains editable. All data remains local to the browser.
+Includes all ARCHIVE v0.7.2 features plus Studio Hub, Studio Feed with comments/reactions/pins, Digital Pin-Up Wall with small image previews and feedback, Crit Booking slots, in-app Notification Centre, profile photo and Class Members.
 
-Deploy: extract ZIP, upload contents preserving netlify/functions folder to GitHub repository, commit, then wait for Netlify deployment. Export backup before updating.
+Demo-only: login is NOT authentication. All data is stored in localStorage on the same browser. No cross-device sync, real uploads, email reminders or security/role enforcement. Images are limited to 650 KB (pin-ups) and 350 KB (avatars) to reduce localStorage exhaustion.
+
+To deploy: extract ZIP; upload root files to your GitHub repository; preserve netlify/functions/architecture-feed.js; commit. Netlify automatically deploys when connected.
+
+BACK UP data before deployment. Original archive-web-v1, Discover, Connect, portal and lecturer-profile storage keys are preserved. Studio Hub uses archive-studio-experience-v08.
